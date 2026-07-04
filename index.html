@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SqueezePic Studio | Ultimate Image & Photo Utility Toolkit</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="SqueezePic Studio एक प्रीमियम और सुरक्षित ऑनलाइन टूलकिट है। बिना क्वालिटी खोए इमेज कंप्रेस करें, फॉर्मेट बदलें और तस्वीरों को PDF में कनवर्ट करें।">
+    <meta name="keywords" content="image compressor, jpg to png, image to pdf, photo converter, secure photo editor, squeezepic studio">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Premium Header Navigation -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <span class="icon">✨</span> Squeeze<span>Pic</span> <span class="badge">Studio</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#tools-section" class="active-nav">⚙️ टूल्स</a>
+                <a href="#help-section">💡 हेल्प सेंटर</a>
+                <a href="#privacy-section">🔒 प्राइवेसी</a>
+                <a href="#contact-section">📧 संपर्क करें</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Decorative Background Section -->
+    <section class="hero-banner">
+        <div class="container">
+            <h1>स्मार्ट इमेज प्रोसेसिंग टूल्स</h1>
+            <p>पाइथन सुपर-कंप्यूटर बैकएंड द्वारा संचालित। बिना किसी क्वालिटी लॉस के अपनी तस्वीरों को ऑप्टिमाइज़ करें।</p>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="container">
+        
+        <!-- Google AdSense Placeholder (Top Leaderboard) -->
+        <div class="ad-container top-ad">
+            <span class="ad-indicator">Advertisement</span>
+            <div class="adsense-box-dummy">Google AdSense - High Revenue Banner Slot</div>
+        </div>
+
+        <!-- Tool Selection Tabs (Colorful UI) -->
+        <section id="tools-section" class="tabs-wrapper">
+            <button class="tab-button tab-compress active" onclick="switchTab('compress-tab')">
+                <span class="tab-icon">🗜️</span> इमेज कंप्रेसर
+            </button>
+            <button class="tab-button tab-convert" onclick="switchTab('convert-tab')">
+                <span class="tab-icon">🔄</span> JPG ⇄ PNG कनवर्टर
+            </button>
+            <button class="tab-button tab-pdf" onclick="switchTab('pdf-tab')">
+                <span class="tab-icon">📄</span> Image से PDF मेकर
+            </button>
+            
+        </section>
+
+        <!-- ==================== 1. COMPRESSOR CARD ==================== -->
+        <section id="compress-tab" class="tool-card active-content">
+            <div class="card-header ch-compress">
+                <h3>🗜️ एडवांस्ड पाइथन इमेज कंप्रेसर</h3>
+                <p>बिना पिक्सेल खराब किए सेकंडों में अपनी तस्वीरों का फाइल साइज (KB) कम करें।</p>
+            </div>
+            <div class="card-body">
+                <div class="upload-zone zone-compress" onclick="document.getElementById('input-compress').click()">
+                    <input type="file" id="input-compress" accept="image/*" hidden>
+                    <div class="upload-graphic">📤</div>
+                    <h4>यहाँ अपनी फोटो अपलोड करें</h4>
+                    <p>सपोर्टेड फॉर्मेट: JPEG, JPG, PNG, WEBP</p>
+                </div>
+                
+                <div class="workspace" id="work-compress" style="display: none;">
+                    <div class="control-panel">
+                        <div class="slider-header">
+                            <label>कंप्रेशन क्वालिटी सेट करें:</label>
+                            <span id="val-compress" class="badge-value">80%</span>
+                        </div>
+                        <input type="range" id="slider-compress" min="10" max="100" value="80" class="gradient-slider">
+                        <button id="btn-download-compress" class="btn-action btn-compress-action">⚡ सर्वर से कंप्रेस करके डाउनलोड करें</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 2. CONVERTER CARD ==================== -->
+        <section id="convert-tab" class="tool-card" style="display: none;">
+            <div class="card-header ch-convert">
+                <h3>🔄 मैजिकल फॉर्मेट कनवर्टर</h3>
+                <p>अपनी इमेज को बिना ब्लर किए तुरंत एक फॉर्मेट से दूसरे फॉर्मेट में बदलें।</p>
+            </div>
+            <div class="card-body">
+                <div class="upload-zone zone-convert" onclick="document.getElementById('input-convert').click()">
+                    <input type="file" id="input-convert" accept="image/*" hidden>
+                    <div class="upload-graphic">🔄</div>
+                    <h4>कनवर्ट करने के लिए फोटो चुनें</h4>
+                    <p>JPG को PNG या PNG को JPG में बदलें</p>
+                </div>
+                
+                <div class="workspace" id="work-convert" style="display: none;">
+                    <div class="control-panel">
+                        <label class="field-label">लक्षित फॉर्मेट (Target Format) चुनें:</label>
+                        <select id="select-format" class="premium-select">
+                            <option value="png">✨ PNG फॉर्मेट में सुरक्षित करें</option>
+                            <option value="jpg">📸 JPG/JPEG फॉर्मेट में सुरक्षित करें</option>
+                        </select>
+                        <button id="btn-download-convert" class="btn-action btn-convert-action">⚡ फॉर्मेट बदलें और डाउनलोड करें</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 3. IMAGE TO PDF CARD ==================== -->
+        <section id="pdf-tab" class="tool-card" style="display: none;">
+            <div class="card-header ch-pdf">
+                <h3>📄 सुरक्षित Image to PDF कनवर्टर</h3>
+                <p>अपने जरूरी दस्तावेजों, मार्कशीट या तस्वीरों को तुरंत एक प्रोफेशनल PDF डॉक्यूमेंट में बदलें।</p>
+            </div>
+            <div class="card-body">
+                <div class="upload-zone zone-pdf" onclick="document.getElementById('input-pdf').click()">
+                    <input type="file" id="input-pdf" accept="image/*" hidden>
+                    <div class="upload-graphic">📋</div>
+                    <h4>PDF बनाने के लिए डॉक्यूमेंट चुनें</h4>
+                    <p>यह सरकारी फॉर्म्स और ऑफिस वर्क्स के लिए एकदम सही है</p>
+                </div>
+                
+                <div class="workspace" id="work-pdf" style="display: none;">
+                    <div class="control-panel">
+                        <button id="btn-download-pdf" class="btn-action btn-pdf-action">⚡ हाई-क्वालिटी PDF फाइल डाउनलोड करें</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google AdSense Placeholder (Middle Content Feed) -->
+        <div class="ad-container">
+            <span class="ad-indicator">Advertisement</span>
+            <div class="adsense-box-dummy">Google AdSense - Native Feed Content Ad</div>
+        </div>
+
+        <!-- ==================== REQUIRED ADSENSE PAGES & INFO ==================== -->
+        
+        <!-- Help & FAQ Section -->
+        <section id="help-section" class="info-block">
+            <div class="block-title">
+                <span class="title-icon">💡</span>
+                <h2>हेल्प सेंटर और अक्सर पूछे जाने वाले सवाल (FAQs)</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>क्या SqueezePic का उपयोग करने के लिए कोई फीस है?</h4>
+                    <p>नहीं, यह पूरी तरह से मुफ्त है। आप बिना किसी सीमा के असीमित इमेजेस को कंप्रेस और कनवर्ट कर सकते हैं।</p>
+                </div>
+                <div class="faq-item">
+                    <h4>पाइथन पावर्ड बैकएंड क्या है?</h4>
+                    <p>यह तकनीक छवियों को कंप्रेस करने के लिए बहुत ही एडवांस एल्गोरिदम का उपयोग करती है जिससे आपकी फोटो का फाइल साइज तो कम हो जाता है, लेकिन उसकी स्पष्टता खराब नहीं होती।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Policy Section -->
+        <section id="privacy-section" class="info-block security-accent">
+            <div class="block-title">
+                <span class="title-icon">🔒</span>
+                <h2>गोपनीयता नीति (Privacy Policy) & डिस्क्लेमर</h2>
+            </div>
+            <p class="privacy-text">हम आपकी प्राइवेसी और सुरक्षा का अत्यधिक सम्मान करते हैं। SqueezePic Studio पर प्रोसेस की जाने वाली कोई भी फोटो या डॉक्यूमेंट हमारे सर्वर पर स्थाई रूप से सुरक्षित या सेव नहीं की जाती है। प्रोसेसिंग के तुरंत बाद मेमोरी को खाली कर दिया जाता है। इस टूल का उपयोग करने के लिए आपको अपना नाम, ईमेल या कोई भी व्यक्तिगत जानकारी साझा करने की आवश्यकता नहीं है।</p>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact-section" class="info-block">
+            <div class="block-title">
+                <span class="title-icon">📧</span>
+                <h2>हमसे संपर्क करें (Contact Us)</h2>
+            </div>
+            <p>यदि आपके पास हमारे इस टूलकिट को लेकर कोई सुझाव, शिकायत या प्रतिक्रिया है, तो आप हमारी डेवलपर टीम से सीधे ईमेल के माध्यम से संपर्क कर सकते हैं:</p>
+            <div class="email-badge">support@squeezepicstudio.com</div>
+        </section>
+
+    </main>
+
+    <!-- Premium Footer Section -->
+    <footer>
+        <div class="container footer-layout">
+            <div class="footer-brand">
+                <h4>📸 Squeeze<span>Pic</span> Studio</h4>
+                <p>डेवलपर्स और क्रिएटर्स के लिए दुनिया का सबसे तेज और सुरक्षित ऑल-इन-वन इमेज यूटिलिटी हब।</p>
+<script src="script.js"></script>
